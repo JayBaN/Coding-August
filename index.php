@@ -8,7 +8,10 @@
 </head>
 <body>
     <?php
-        echo "hello";
+
+    $name ="Alden";
+
+        echo "hello {$name}";
     ?>
 </body>
 </html>
