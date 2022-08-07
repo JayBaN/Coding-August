@@ -30,7 +30,9 @@
 </head>
 <body>
     <?php 
-        $name =  htmlspecialchars($_GET['name']);
+    require('class/task.php');
+    $task = new Task();
+        // $name =  htmlspecialchars($_GET['name']);
 
         // array on php
         $fruits = ['apple','banana','orange'];
@@ -59,6 +61,7 @@
             $value = ucfirst($data);
             return $value;
         }
+
     ?>
    <header>
         <h1>
