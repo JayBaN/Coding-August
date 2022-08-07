@@ -5,13 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        header {
+            text-align: center;
+            padding:2em;
+            background-color:black;
+            color:white;
+            text-transform: capitalize;
+        }
+    </style>
 </head>
 <body>
-    <?php
+    <?php 
+        $name =  $_GET['name'];
 
-    $name ="Alden";
 
-        echo "hello {$name}";
     ?>
+   <header>
+        <h1><?=  $name; ?></h1>
+   </header>
+
+   
 </body>
 </html>
