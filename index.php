@@ -34,8 +34,12 @@
 
         // assoaciative array on php
         $person = [
-            'age'
-        ]
+            'age' => 26,
+            'name' => 'Alden',
+            'occupation' => 'Worker'
+        ];
+        // add an array on assocaitive array
+        $person['color'] = 'blue';
     ?>
    <header>
         <h1>
@@ -45,6 +49,19 @@
                     ?>
                             <li>
                                 <?php echo $food; ?>
+                            </li>
+                        
+                    <?php
+                }
+            ?>
+            </ol>
+
+            <ol>
+            <?php  
+                foreach($person as $key => $value ) {
+                    ?>
+                            <li>
+                                <?php echo $value; ?>
                             </li>
                         
                     <?php
