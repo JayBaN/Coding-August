@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            margin: 0;
+        }
         header {
             text-align: center;
             padding:2em;
@@ -32,19 +35,31 @@
         // array on php
         $fruits = ['apple','banana','orange'];
 
+        // add data on array on php
+        $fruits[] = 'pineapple';
+
         // assoaciative array on php
         $person = [
             'age' => 26,
-            'name' => 'Alden',
-            'occupation' => 'Worker'
+            'name' => 'Alen',
+            'occupation' => 'Worker',
+            'check' => True
         ];
         // add an array on assocaitive array
         $person['color'] = 'blue';
+
+        $gaming_pc = [
+            'processor' => 'i5',
+            'gpu' => 'gtx 1660 super',
+
+        ];
     ?>
    <header>
         <h1>
+            <?php echo var_dump($person) ?>
             <ol>
             <?php  
+                echo $person['check'] ? 'Alden' : 'NOT AUTHORIZED';
                 foreach($fruits as $food) {
                     ?>
                             <li>
