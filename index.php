@@ -14,7 +14,7 @@
             padding:2em;
             background-color:black;
             color:white;
-            text-transform: capitalize;
+            /* text-transform: capitalize; */
             font-family:arial;
         }
         ol li {
@@ -41,7 +41,7 @@
         // assoaciative array on php
         $person = [
             'age' => 26,
-            'name' => 'Alen',
+            'name' => 'Alden',
             'occupation' => 'Worker',
             'check' => True
         ];
@@ -53,17 +53,22 @@
             'gpu' => 'gtx 1660 super',
 
         ];
+
+
+        function upperCase($data) {
+            $value = ucfirst($data);
+            return $value;
+        }
     ?>
    <header>
         <h1>
-            <?php echo var_dump($person) ?>
+            <!-- <?php echo var_dump($person) ?> -->
             <ol>
             <?php  
-                echo $person['check'] ? 'Alden' : 'NOT AUTHORIZED';
                 foreach($fruits as $food) {
                     ?>
                             <li>
-                                <?php echo $food; ?>
+                                <?php echo upperCase($food); ?>
                             </li>
                         
                     <?php
