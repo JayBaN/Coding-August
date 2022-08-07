@@ -12,17 +12,31 @@
             background-color:black;
             color:white;
             text-transform: capitalize;
+            font-family:arial;
         }
     </style>
 </head>
 <body>
     <?php 
-        $name =  $_GET['name'];
+        $name =  htmlspecialchars($_GET['name']);
 
-
+        $fruits = ['apple','banana','orange'];
     ?>
    <header>
-        <h1><?=  $name; ?></h1>
+        <h1>
+            <ol>
+            <?php  
+                foreach($fruits as $food) {
+                    ?>
+                            <li>
+                                <?php echo $food; ?>
+                            </li>
+                        
+                    <?php
+                }
+            ?>
+            </ol>
+        </h1>
    </header>
 
    
