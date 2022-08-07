@@ -14,13 +14,28 @@
             text-transform: capitalize;
             font-family:arial;
         }
+        ol li {
+            padding:2em;
+            border:1px solid white;
+        }
+        ol li:hover {
+            background:yellow;
+            cursor:pointer;
+            color:black;
+        }
     </style>
 </head>
 <body>
     <?php 
         $name =  htmlspecialchars($_GET['name']);
 
+        // array on php
         $fruits = ['apple','banana','orange'];
+
+        // assoaciative array on php
+        $person = [
+            'age'
+        ]
     ?>
    <header>
         <h1>
