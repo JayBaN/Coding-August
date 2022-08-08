@@ -31,7 +31,7 @@
 <body>
     <?php 
     require('class/task.php');
-    $task = new Task();
+        
         // $name =  htmlspecialchars($_GET['name']);
 
         // array on php
