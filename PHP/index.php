@@ -31,6 +31,7 @@
 <body>
     <?php 
     require('class/task.php');
+    require('class/team.php');
         
         // $name =  htmlspecialchars($_GET['name']);
 

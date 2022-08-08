@@ -6,6 +6,8 @@ class Transaction {
     protected $user = "1122120";
     private $pass = "gogo";
 
+    protected $members = [];
+
     public function __construct($amount,$description) {
         echo $this->add($amount,$description);
     }
@@ -41,14 +43,14 @@ class Customer extends Transaction {
 }
 
 
-$task = new Transaction(0,0);
-$customer = new customer(0,0);
+// $task = new Transaction(0,0);
+// $customer = new customer(0,0);
 // echo $task->add(1,1);
 
 //Calling a static method from class
 // echo Transaction::print();
 
-echo $customer->toDoList();
+// echo $customer->toDoList();
 // echo $customer->tryMe();
 
 
