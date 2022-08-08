@@ -2,7 +2,7 @@
 
 class Transaction {
 
-    public $file;
+    public $file = "Windows";
     protected $user = "1122120";
     private $pass = "gogo";
 
@@ -11,7 +11,7 @@ class Transaction {
     }
 
     public function test() {
-        echo "Im working@";
+        return $this->pass;
     }
 
     public function add($value, $value2) {
@@ -20,18 +20,36 @@ class Transaction {
     }
 
     public static function print() {
-        echo "test me";
+        return self::$user;
     }
 
+    protected function tryMe() {
+        echo "protected worked";
+    }
+
+    private function tryMeAgain() {
+        echo "private function worked";
+    }
+}
+
+class Customer extends Transaction {
+    
+    public function toDoList() {
+        echo $this->tryMe();
+    }
 
 }
 
 
-
-$task = new Transaction(100,2);
-
+$task = new Transaction(0,0);
+$customer = new customer(0,0);
 // echo $task->add(1,1);
-echo $task::print();
+
+//Calling a static method from class
+// echo Transaction::print();
+
+echo $customer->toDoList();
+// echo $customer->tryMe();
 
 
 
