@@ -2,6 +2,10 @@
 
 class Transaction {
 
+    public $file;
+    protected $user = "1122120";
+    private $pass = "gogo";
+
     public function __construct($amount,$description) {
         echo $this->add($amount,$description);
     }
@@ -15,15 +19,20 @@ class Transaction {
         return $total;
     }
 
+    public static function print() {
+        echo "test me";
+    }
+
+
 }
 
 
 
-
-
-// $task = new Transaction(100,2);
+$task = new Transaction(100,2);
 
 // echo $task->add(1,1);
+echo $task::print();
+
 
 
 $user = "root";
