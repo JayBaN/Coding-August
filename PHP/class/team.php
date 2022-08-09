@@ -108,12 +108,63 @@ $unpublishedPosts = array_filter($posts, function ($post) {
 
 $modified = array_map(function ($post){
 
-    return "foobar";
+    $post->published = true;
+
+    return $post;
 
 }, $posts);
 
 
-var_dump($modified);
+// var_dump($modified);
+
+
+
+class Cars {
+
+    public $car;
+    protected $price;
+
+    public function __construct($name) {
+
+        $this->car = $name;
+
+    }
+
+    public function price($price) {
+        $this->price = $price;
+    }
+
+}
+
+class Customer {
+
+    public $name;
+    public $age;
+    protected $gender;
+
+    public function __construct($name,$age,$gender)
+    {
+        $this->name = $name;
+        $this->age = $age;
+        $this->gender = $gender;
+    } 
+
+}
+
+class Rental {
+
+
+}
+
+
+$personalCar = new Cars('Ferrari');
+$personalCar->price('25,000');
+
+print_r($personalCar);
+
+foreach($personalCar as $key => $value) {
+    echo "The $key is: $value \n" ;
+}
 
 
 ?>

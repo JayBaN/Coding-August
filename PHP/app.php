@@ -18,7 +18,7 @@
 </head>
 <body>
     <?php
-        require('class/task.php');
+        // require('class/task.php');
         require('class/team.php');
     ?>
 </body>

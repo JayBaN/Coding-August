@@ -64,5 +64,11 @@ try {
     die ($e->getMessage());
 }
 
+$statement = $pdo->prepare('select * from tbl_games');
 
+$statement->execute();
+
+$result = $statement->fetchAll(PDO::FETCH_OBJ);
+
+var_dump($result[0]->description);
 ?>
